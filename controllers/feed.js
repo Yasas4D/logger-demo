@@ -1,8 +1,5 @@
-const { validationResult } = require("express-validator");
-const Post = require("../models/posts");
 const fs = require("fs");
 const path = require("path");
-const User = require("../models/user");
 
 exports.getPosts = async (req, res, next) => {
   const currentPage = req.query.page || 1;

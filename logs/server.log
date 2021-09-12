@@ -1,0 +1,4 @@
+error: Sep-12-2021 23:52:50: 	Hello, Winston logger, the second error!
+info: Sep-12-2021 23:52:50: 	Hello, Winston logger, some info!
+error: Sep-12-2021 23:53:04: 	Hello, Winston logger, the second error!
+info: Sep-12-2021 23:53:04: 	Hello, Winston logger, some info!
