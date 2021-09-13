@@ -1,20 +1,19 @@
 const express = require("express");
-const feedRouts = require("./routes/feed");
+const userRouts = require("./routes/users");
 const authRouts = require("./routes/auth");
 const app = express();
 const logger = require("./utils/logger");
+const port = 3000;
 
-logger.error("Hello, Winston logger, the second error!");
-logger.info("Hello, Winston logger, some info!");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use("/feed", feedRouts);
+// logger.error("Hello, Winston logger, the second error!");
+// logger.info("Hello, Winston logger, some info!");
+
 app.use("/auth", authRouts);
+app.use("/api", userRouts);
 
-// app.use((error, req, res, next) => {
-//   console.log(error);
-//   const status = error.statusCode || 500;
-//   const message = error.message;
-//   res.status(status).json({ message: message });
-// });
-
-app.listen(8080);
+app.listen(port, () => {
+  console.log("Server started");
+});

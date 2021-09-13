@@ -1,4 +1,5 @@
-error: Sep-12-2021 23:52:50: 	Hello, Winston logger, the second error!
-info: Sep-12-2021 23:52:50: 	Hello, Winston logger, some info!
-error: Sep-12-2021 23:53:04: 	Hello, Winston logger, the second error!
-info: Sep-12-2021 23:53:04: 	Hello, Winston logger, some info!
+error: Sep-13-2021 08:32:35: 	Not Authenticated!
+error: Sep-13-2021 08:34:29: 	Not Authenticated!
+error: Sep-13-2021 08:35:03: 	Not Authenticated!
+error: Sep-13-2021 08:35:12: 	Not Authenticated!
+error: Sep-13-2021 08:36:27: 	Not Authenticated!

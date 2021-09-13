@@ -1,11 +1,11 @@
 const logger = require("../utils/logger");
 
 module.exports = (req, res, next) => {
+  // Currently checking only Authorization header is there as for simplicity
+  // You can implement the rest by adding a jwt authentication
   if (!req.get("Authorization")) {
-    const error = new Error("Not Authenticated..");
     logger.error("Not Authenticated!");
-    error.statusCode = 401;
-    throw error;
+    return res.status(401).json({ message: "User Not Authenticated!" });
   }
   next();
 };
