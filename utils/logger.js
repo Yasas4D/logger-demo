@@ -1,16 +1,26 @@
 const { createLogger, format, transports } = require("winston");
 
 module.exports = createLogger({
-  transports: new transports.File({
-    filename: "logs/server.log",
-    format: format.combine(
-      format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
-      format.align(),
-      format.printf(
-        (info) => `${info.level}: ${[info.timestamp]}: ${info.message}`
-      )
-    ),
-  }),
+  format: format.combine(
+    format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
+    format.align(),
+    format.printf((i) => `${i.level}: ${[i.timestamp]}: ${i.message}`)
+  ),
+  transports: [
+    new transports.File({
+      filename: "logs/info.log",
+      level: "info",
+      format: format.combine(
+        format.printf((i) =>
+          i.level === "info" ? `${i.level}: ${i.timestamp} ${i.message}` : ""
+        )
+      ),
+    }),
+    new transports.File({
+      filename: "logs/error.log",
+      level: "error",
+    }),
+  ],
 });
 
 // const logger = winston.createLogger({

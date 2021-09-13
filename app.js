@@ -14,6 +14,14 @@ app.use(express.json());
 app.use("/auth", authRouts);
 app.use("/api", userRouts);
 
+// Root path
+app.get("/", (req, res, next) => {
+  res.json({ message: "Ok" });
+});
+
 app.listen(port, () => {
-  console.log("Server started");
+  logger.warn("warnigggggg");
+  logger.error(`Custom Error Message`);
+  logger.info(`Server Started in port : ${port}!`);
+  logger.debug(`debyug Server Started in port : ${port}!`);
 });

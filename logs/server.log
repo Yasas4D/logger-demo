@@ -1,5 +1,9 @@
-error: Sep-13-2021 08:32:35: 	Not Authenticated!
-error: Sep-13-2021 08:34:29: 	Not Authenticated!
-error: Sep-13-2021 08:35:03: 	Not Authenticated!
-error: Sep-13-2021 08:35:12: 	Not Authenticated!
-error: Sep-13-2021 08:36:27: 	Not Authenticated!
+error: Sep-13-2021 17:36:02: 	errorr Server Started in port : 3000!
+error: Sep-13-2021 17:37:02: 	errorr Server Started in port : 3000!
+warn: Sep-13-2021 17:37:32: 	warnigggggg
+error: Sep-13-2021 17:37:32: 	errorr Server Started in port : 3000!
+info: Sep-13-2021 17:37:32: 	Server Started in port : 3000!
+debug: Sep-13-2021 17:37:32: 	debyug Server Started in port : 3000!
+warn: Sep-13-2021 17:40:01: 	warnigggggg
+error: Sep-13-2021 17:40:01: 	errorr Server Started in port : 3000!
+info: Sep-13-2021 17:40:01: 	Server Started in port : 3000!
