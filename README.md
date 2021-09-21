@@ -1,32 +1,43 @@
 # logger-demo
 
-A demo logging for Node,js
+A Basic Node.js/Express REST API implementation example for logging.
 
-You can clone this repository and do
+# Prerequisites
 
-`npm install for installing necessory modules
+- Node.js
+- NPM
 
-Run the Application
+# Usage
 
-`npm start
+- Run `npm install` to installl dependencies
+- Run `npm start` to start the local server
+- Load `http://localhost:3000` to test the endpoint. It will display a json result `{"message":"Ok"}`
 
-2 API's Implemented
+# API Endpoints
 
-1. Signup -
-2. Get user list -
+## POST /auth/signup
 
-You can see the results as below
-Example REST API's
+user signup
 
+```bash
 curl --header "Content-Type: application/json" \
  --request POST \
  --data '{"email":"yasas@gmail.com","password":"xyz"}' \
  http://localhost:3000/auth/signup
+```
 
-Not Authenticated request for get users
+## GET /api/users
+
+Get a list of users -Not Authenticated
+
+```bash
 curl http://localhost:3000/api/users
+```
 
-Auth request for get users
+Get a list of users - Authenticated
+
+```bash
 curl --header "Authorization: Bearer token" \
  --request GET \
  http://localhost:3000/api/users | json_pp
+```
